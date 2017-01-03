@@ -30,10 +30,8 @@ class UsersController {
     }
 
     getSingleUser(req, res) {
-        
-        var id = req.params.id;
 
-        //console.log('id in req: ', id);
+        var id = req.params.id;
 
         var user = UsersService.getSingleUser(id)
                         .then(function(contents) {
@@ -46,7 +44,6 @@ class UsersController {
 
     putUser(req, res) {
 
-        //console.log('req.body: ', req.body);
         var id = req.params.id;
         var userInfo = req.body;
 

@@ -51,8 +51,6 @@ class UsersService {
 
         //if (typeof(id) === 'undefined') return null;
 
-        console.log('update id: ', id);
-
         return new Promise(function(resolve, reject) {
 
             db.get().users.updateOne({_id: new db.get().objectId(id)}, {$set: info}, function(err, doc) {
@@ -65,16 +63,6 @@ class UsersService {
 
         });
 
-
-        /*var user = this.getSingleUser(userId);
-        if (user) {
-            user.firstName = info.firstName ? info.firstName : user.firstName;
-            user.lastName = info.lastName ? info.lastName : user.lastName;
-            user.email = info.email ? info.email : user.email;
-
-            return true;
-        }
-        return false;*/
     }
 
     addUser(info) {
